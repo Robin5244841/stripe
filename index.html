@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stripe Checkout Session (Javascript)</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="Checkout">Checkout</button>
+
+    <script>
+        var stripe = Stripe();
+      document.getEkementById('checkout').addEventListener('click', function () {
+        stcipe.redirectToCheckout({
+          lineItems:  [
+                 {
+                    price: " prics_1.183" ,
+                   quantity: 1,
+                 },
+           ],
+             mode: "subscribetion" ,
+             successUrl: "https://www.gppgle.com/" ,
+             cancelUrl: "https://www.twitter.com/" ,
+          } )
+          .then( funtion( result )){
+
+          });
+        })
+    </script>
+  </body>
+</html>
